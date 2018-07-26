@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-6">
+            <h4>Flights</h4>
+            <div class="row">
+                <div class="col-xs-3">Flight Number</div>
+                <div class="col-xs-3">Airline</div>
+                <div class="col-xs-3">Origin</div>
+                <div class="col-xs-3">Destination</div>
+            </div>
+            <app-flight-item 
+                *ngFor="let flight of flights; let i = index;" 
+                [flight]="flight" 
+                style="padding: 0%"
+                (click)="onDelete(i)">
+            </app-flight-item>
+        </div>
+        <div class="col-xs-6"><app-add-flight></app-add-flight></div>        
+    </div>
+</div>
